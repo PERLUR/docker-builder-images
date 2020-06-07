@@ -4,7 +4,8 @@ MAINTAINER "Mark Stopka <mark.stopka@perlur.cloud>"
 
 ENV SERVICE_NAME "rust-rustup"
 
-RUN yum update -y
+RUN yum update -y && \
+    yum install -y git-core
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 COPY etc/profile.d/rust-cargo.sh /etc/profile.d/
 RUN yum clean all && \

@@ -4,7 +4,8 @@ MAINTAINER "Mark Stopka <mark.stopka@perlur.cloud>"
 
 ENV SERVICE_NAME "haskell-stack"
 
-RUN yum update -y
+RUN yum update -y && \
+    yum install -y git-core
 RUN curl -L --proto '=https' --tlsv1.2 -sSf https://get.haskellstack.org/ | sh -s --
 RUN yum clean all && \
     dnf clean all && \
