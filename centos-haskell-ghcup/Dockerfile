@@ -2,7 +2,7 @@ FROM perlur/centos-base
 
 MAINTAINER "Mark Stopka <mark.stopka@perlur.cloud>"
 
-ENV SERVICE_NAME "haskell-stack"
+ENV SERVICE_NAME "haskell-ghcup"
 
 RUN yum update -y && \
     yum install -y gcc gcc-c++ git-core gmp gmp-devel make ncurses ncurses-compat-libs xz perl
