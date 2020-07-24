@@ -5,7 +5,7 @@ ENV SERVICE_NAME "ocaml-opam"
 
 LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="PERLUR CentOS Haskell Stack Builder Image" \
+      org.label-schema.name="PERLUR CentOS Ocaml Opam Builder Image" \
       org.label-schema.license="AGPL-3.0-or-later" \
       org.label-schema.vendor="PERLUR Group"
 LABEL org.opencontainers.image.created=$BUILD_DATE \
