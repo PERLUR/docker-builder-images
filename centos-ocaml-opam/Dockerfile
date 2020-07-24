@@ -15,7 +15,7 @@ LABEL org.opencontainers.image.created=$BUILD_DATE \
 LABEL maintainer="Mark Stopka <mark.stopka@perlur.cloud>"
 
 RUN yum update -y && \
-    yum install -y bubblewrap bzip2 gcc git-core m4 make openssl patch unzip
+    yum install -y bubblewrap bzip2 diffutils gcc git-core m4 make openssl patch unzip
 RUN curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh -s
 RUN yum clean all && \
     dnf clean all && \
